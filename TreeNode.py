@@ -1,4 +1,3 @@
-# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -27,10 +26,13 @@ def hauteur(T:TreeNode):
     return 1 + max( hauteur(T.left) , hauteur(T.right))
 
 
-def compteurfeuille(T:TreeNode):
-    if  T == None :
+def compteurfeuille(T: TreeNode):
+    if T is None:
         return 0
-    return compteurfeuille(T.left) +compteurfeuille(T.right)
+    if T.left is None and T.right is None:
+        return 1
+    return compteurfeuille(T.left) + compteurfeuille(T.right)
+
 
 def sommmevaleurs(T:TreeNode):
     if T == None:
@@ -50,13 +52,32 @@ def max_valeur(T:TreeNode):
     
     return max(T.val, max_valeur(T.left), max_valeur(T.right))
 
-def search(T:TreeNode,n:int):
-    
+def search(T:TreeNode,n:int): 
     if T is None :
-        return False
+        return False  
     
     if T.val == n:
         return True 
     
     return search(T.left,n) or search(T.right,n)
+
+def Preordre(T:TreeNode):
+    if T == None:
+        return []
+    
+    return [T.val] + Preordre(T.left) + Preordre(T.right)
+
+
+
+def Inordre(T:TreeNode):
+    if T == None:
+        return []
+    
+    return  Inordre(T.left) +[T.val] + Inordre(T.right)
+
+def postorder(T:TreeNode):
+    if T == None:
+        return []
+    
+    return  postorder(T.left)  + postorder(T.right) +[T.val]
 

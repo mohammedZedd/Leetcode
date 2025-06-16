@@ -6,19 +6,17 @@ Calculer la hauteur de l’arbre (nombre maximal de niveaux) ✅
 
 Parcours de l’arbre :
 
-Pré-ordre (racine → gauche → droite)
+Pré-ordre (racine → gauche → droite) ✅
 
-In-ordre (gauche → racine → droite)
+In-ordre (gauche → racine → droite) ✅
 
-Post-ordre (gauche → droite → racine)
+Post-ordre (gauche → droite → racine) ✅
 
-Rechercher une valeur dans l’arbre
+Rechercher une valeur dans l’arbre ✅
 
 Compter le nombre de feuilles ✅
 
 Vérifier si l’arbre est un arbre binaire de recherche (BST) ✅
-
-Vérifier la validité de la structure de l’arbre (exemple : enfants bien des nœuds ou None)
 
 Calculer la somme des valeurs dans l’arbre ✅
 
